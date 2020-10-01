@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { useToasts } from "react-toast-notifications";
 import RegisterForm from "../components/auth/RegisterForm";
 import { register } from "../actions";
+import onlyGuest from '../components/hoc/onlyGuest';
 
 import { Redirect } from "react-router-dom";
+
 
 const Register = (props) => {
 
@@ -46,4 +48,4 @@ const Register = (props) => {
 }
 
 // export default withRouter(Register)
-export default Register
+export default onlyGuest(Register)
