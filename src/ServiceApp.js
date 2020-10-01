@@ -16,7 +16,7 @@ class ServiceApp extends Component {
   renderApplication = (auth) => {
     return (
       <React.Fragment>
-        <Navbar logout={this.HandleLogout} auth={auth} />
+        <Navbar loadFresh id="navbar-main" logout={this.HandleLogout} auth={auth} />
         <Navbar logout={this.HandleLogout} auth={auth} id="navbar-clone" />
         <Sidebar />
         <Routes />
