@@ -41,6 +41,7 @@ export const logout = () => (dispatch) =>
   api.logout().then((_) => dispatch({ user: null, type: SET_AUTH_USER }));
 
 export const storeAuthUser = (authUser) => (dispatch) => {
+  dispatch({type: RESET_AUTH_STATE })
   if (authUser) {
     return api
       .getUserProfile(authUser.uid)
@@ -52,4 +53,3 @@ export const storeAuthUser = (authUser) => (dispatch) => {
   }
 };
 
-export const resetAuthState = () => ({type: RESET_AUTH_STATE })
