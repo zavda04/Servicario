@@ -8,11 +8,15 @@ import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import ServiceDetailPage from "./pages/ServiceDetail";
+import SecretPage from './pages/Secret';
 
 
  const Routes = () => {
     return (
         <Switch>
+          <Route path="/secret">
+          <SecretPage />
+        </Route>
         <Route path="/register">
           <RegisterPage />
         </Route>
