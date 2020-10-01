@@ -6,12 +6,18 @@ import Sidebar from "./components/Sidebar";
 import Routes from "./Routes";
 import Spinner from './components/Spinner';
 
+import { logout } from './actions';
+
 class ServiceApp extends Component {
+
+
+  HandleLogout = () => this.props.dispatch(logout())
+
   renderApplication = (auth) => {
     return (
       <React.Fragment>
-        <Navbar auth={auth} />
-        <Navbar auth={auth} id="navbar-clone" />
+        <Navbar logout={this.HandleLogout} auth={auth} />
+        <Navbar logout={this.HandleLogout} auth={auth} id="navbar-clone" />
         <Sidebar />
         <Routes />
       </React.Fragment>
