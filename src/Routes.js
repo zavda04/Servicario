@@ -10,6 +10,8 @@ import RegisterPage from "./pages/Register";
 import ServiceDetailPage from "./pages/ServiceDetail";
 import SecretPage from './pages/Secret';
 
+import ServiceCreatePage from './pages/services/ServiceCreate';
+
 
  const Routes = () => {
     return (
@@ -22,6 +24,9 @@ import SecretPage from './pages/Secret';
         </Route>
         <Route path="/login">
           <LoginPage />
+        </Route>
+        <Route path="/services/new">
+          <ServiceCreatePage />
         </Route>
         <Route path="/services/:serviceId">
           <ServiceDetailPage />
